@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StartService } from '../start/start.service';
 
 @Component({
   selector: 'app-start',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private startService: StartService,
+  ) { }
 
   ngOnInit() {
 
@@ -20,7 +23,6 @@ export class StartComponent implements OnInit {
       let card = document.getElementsByClassName('card')  as HTMLCollectionOf<HTMLElement>;
       card[0].classList.remove("swipe-right")
 
-      // card.classList.add("")
       card[0].classList.add("swipe-left")
       console.log(card[0].classList);
       console.log(x);
@@ -45,7 +47,7 @@ export class StartComponent implements OnInit {
       setTimeout(function(){ 
         card[0].classList.remove("swipe-right");
         // TODO NEW INFO IN CLASS
-      
+        // this.startService.APIcall(args);
       
       }, 500);
       
