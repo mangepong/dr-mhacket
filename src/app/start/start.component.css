@@ -1,0 +1,62 @@
+.cardContainer {
+  width: 200px;
+  height: 300px;
+  background-color: aqua;
+}
+
+.card {
+  background-color: #efefef;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 3px;
+  height: 400px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  overflow: auto;
+  margin: auto;
+  -webkit-animation: linear infinite alternate;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 5s;
+}
+
+.swipe-right {
+  animation: roll-right 1s ease both;
+  transition: 0.2s;
+  right: 0;
+  background-color: red;
+}
+
+.swipe-left {
+  animation: roll-left 1s ease both;
+  transition: 0.2s;
+  right: 0;
+  background-color: blue;
+}
+
+h1,
+p {
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}
+@keyframes roll-right {
+  /* Basic move left and right*/
+  0% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(1000px);
+  }
+}
+
+@keyframes roll-left {
+  /* Basic move left and right*/
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(-1000px);
+  }
+}
