@@ -47,7 +47,7 @@ p {
     transform: translateX(10px);
   }
   100% {
-    transform: translateX(1000px);
+    transform: translateX(2000px);
   }
 }
 
@@ -57,6 +57,6 @@ p {
     transform: translateX(-10px);
   }
   100% {
-    transform: translateX(-1000px);
+    transform: translateX(-2000px);
   }
 }
