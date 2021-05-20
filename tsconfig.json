@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+      "typeRoots": [
+        "node_modules/@types"
+      ], // "typeRoots": [] -> won't work
+      "types": [
+        "node"
+      ],
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

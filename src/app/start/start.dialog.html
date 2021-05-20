@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Liked movies</h2>
+<mat-dialog-content class="mat-typography">
+    <div *ngFor="let movie of liked">
+        <h3>{{movie.Title}}</h3>
+        <img class="selectDisable" src={{movie.Poster}}>
+        <small>{{movie.Actors}}</small>
+        <p><b>Plot:</b><br> {{movie.Plot}}</p>
+        <p><b>Genres:</b> {{movie.Genre}}</p>
+        <p><b>Year:</b> {{movie.Year}}</p>
+        <p><b>Runtime:</b> {{movie.Runtime}}</p>
+        <hr>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button (click)="clear()" mat-button mat-dialog-close>Clear Storage</button>
+</mat-dialog-actions>

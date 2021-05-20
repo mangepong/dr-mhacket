@@ -1,8 +1,16 @@
-<div class="container">
-    <div class="card" 
+<div class="container selectDisable">
+    <div class="card selectDisable"
+        *ngIf="movie"
         (swipeLeft)="onSwipeLeft($event)"
         (swipeRight)="onSwipeRight($event)"
     >
-    Swipe me
+    <h3>{{movie.Title}}</h3>
+    <img class="selectDisable" src={{movie.Poster}}>
+    <small>{{movie.Actors}}</small>
+    <p><b>Plot:</b> {{movie.Plot}}</p>
+    <p>Genres: {{movie.Genre}}</p>
+    <p>Year: {{movie.Year}}</p>
+    <p>Runtime: {{movie.Runtime}}</p>
     </div>
 </div>
+<button mat-button (click)="openDialog()">Liked Movies</button>
